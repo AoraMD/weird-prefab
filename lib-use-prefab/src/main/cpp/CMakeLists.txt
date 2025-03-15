@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.22.1)
+project("prefab")
+add_library(main SHARED main.c)
+find_package(lib-publish-prefab REQUIRED CONFIG)
+target_link_libraries(main log lib-publish-prefab::foo)
